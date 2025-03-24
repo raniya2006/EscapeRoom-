@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Puzzle</title>
+    <style>
+        body { background-color: black; color: white; text-align: center; font-family: Arial, sans-serif; }
+        .puzzle { margin-top: 50px; font-size: 20px; }
+        .hidden-message { display: none; font-size: 24px; color: cyan; margin-top: 20px; }
+        button { padding: 10px 20px; font-size: 16px; margin-top: 20px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>🚀 Cosmic Puzzle Challenge 🚀</h1>
+    <p class="puzzle">Solve this riddle to reveal the final message:</p>
+    <p><strong>"I have a tail, but I’m not an animal. I shine brightly, but I’m not a star. I visit but never stay. What am I?"</strong></p>
+    <input type="text" id="answer" placeholder="Enter your answer here">
+    <button onclick="checkAnswer()">Submit</button>
+    <p id="message" class="hidden-message">✨ The rings hold the key. Arrange them in the correct order to activate the hyperdrive! ✨</p>
+    
+    <script>
+        function checkAnswer() {
+            var answer = document.getElementById("answer").value.toLowerCase();
+            if (answer === "comet") {
+                document.getElementById("message").style.display = "block";
+            } else {
+                alert("Incorrect! Try again.");
+            }
+        }
+    </script>
+</body>
+</html>
